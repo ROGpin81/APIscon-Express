@@ -2,23 +2,21 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-const usuarios = [
-  { id: 1, nombre: 'Juan', email: 'juan@email.com' },
-];
-
-const productos = [
-  { id: 1, nombre: 'Laptop', precio: 1200 },
-];
-
 app.get('/api/usuarios', (req, res) => {
+    const usuarios = [
+      { id: 1, nombre: 'Juan', email: 'juan@email.com' },
+  ];
   res.status(200).json(usuarios);
 });
 
 app.get('/api/productos', (req, res) => {
+    const productos = [
+      { id: 1, nombre: 'Laptop', precio: 1200 },
+  ];
   res.status(200).json(productos);
 });
 
-app.get('/categorias', (req, res)=>{
+app.get('/api/categorias', (req, res)=>{
     const categorias = [
         {"id": 1, "nombre": "Electrónica"},
         {"id": 2, "nombre": "Ropa"},
@@ -29,7 +27,7 @@ app.get('/categorias', (req, res)=>{
     res.json(categorias);
 });
 
-app.get('/pedidos', (req, res)=>{
+app.get('/api/pedidos', (req, res)=>{
     const pedidos = [
         {"id": 1, "usuario": "Juan", "total": 500},
         {"id": 2, "usuario": "María", "total": 750},
