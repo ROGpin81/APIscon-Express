@@ -12,6 +12,7 @@ const productos = [
 
 app.get('/api/usuarios', (req, res) => {
   res.status(200).json(usuarios);
+});
 
 app.get('/api/productos', (req, res) => {
   res.status(200).json(productos);
@@ -19,4 +20,4 @@ app.get('/api/productos', (req, res) => {
 
 app.listen(PORT, ()=>{
     		console.log(`Servidor escuchando en http://localhost:${PORT}`);
-	});
+});
