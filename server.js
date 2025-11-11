@@ -2,8 +2,12 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
-app.get('/', (req, res)=>{
-    res.send('Hola Mundo...');
+const productos = [
+  { id: 1, nombre: 'Laptop', precio: 1200 },
+];
+
+app.get('/api/productos', (req, res) => {
+  res.status(200).json(productos);
 });
 
 app.listen(PORT, ()=>{
